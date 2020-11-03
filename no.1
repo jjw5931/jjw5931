@@ -1,0 +1,12 @@
+asf=[]
+count=int(input("아프리카 돼지열병 발생 지역은 몇군데 인가요?: "))
+for i in range(count):
+    where=input("발생 지역을 입력하세요: ")
+    num=int(input("살처분된 돼지의 수를 입력하세요: "))
+    asf.append((where,num))
+print(asf)
+
+asf.sort(key=lambda p: p[0])
+print("발생 지역 정렬: ", asf)
+asf.sort(key=lambda p: p[1], reverse=True)
+print("살처분 돼지 수: ", asf)
